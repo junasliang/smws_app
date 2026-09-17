@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "SMWS Search",
+    "slug": "smws-search",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "smwssearch",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "允許 SMWS Search 連線到區域網路中的開發 API。",
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true
+        },
+        "NSCameraUsageDescription": "允許使用相機掃描 SMWS 酒款編號",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "com.example.smwssearch"
+    },
+    "android": {
+      "package": "com.example.smwssearch",
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "允許 SMWS Search 使用相機辨識酒款。",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "a297b464-3f32-465c-9690-94072d75ab1f"
+      }
+    }
+  }
+}
