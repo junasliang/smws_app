@@ -1,0 +1,6 @@
+# Deployment snapshot: source DB lives at ../data/smws.db in the monorepo.
+data/*.db
+
+# Build output
+bin/
+smws-api
