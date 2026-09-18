@@ -25,12 +25,3 @@ export interface WhiskySearchResponse {
   total: number;
   items: WhiskySummary[];
 }
-
-export interface ScanResponse {
-  status: "matched" | "no_cask" | "not_found";
-  matched: boolean;
-  cask_no: string | null;
-  detected_candidates: string[];
-  ocr_texts: string[];
-  whisky: WhiskySummary | null;
-}

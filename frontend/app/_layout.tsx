@@ -14,6 +14,7 @@ export default function RootLayout() {
         options={{
           title: "掃描酒款",
           presentation: "fullScreenModal",
+          headerShown: false,
         }}
       />
       <Stack.Screen

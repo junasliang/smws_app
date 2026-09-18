@@ -3,8 +3,8 @@ node_modules/
 dist/
 web-build/
 .env
-android/
-ios/
+/android
+/ios
 *.log
 .DS_Store
 

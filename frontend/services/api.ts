@@ -3,10 +3,6 @@ import type {
   WhiskySearchResponse,
 } from "../types/whisky";
 
-import type {
-  ScanResponse,
-} from "../types/whisky";
-
 const rawApiUrl = process.env.EXPO_PUBLIC_API_URL;
 
 if (!rawApiUrl) {
@@ -79,37 +75,4 @@ export async function getWhisky(caskNo: string): Promise<WhiskyDetail> {
   return getJson<WhiskyDetail>(
     `/api/v1/whiskies/${encodeURIComponent(caskNo)}`,
   );
-}
-
-export async function scanWhiskyImage(
-  imageUri: string,
-): Promise<ScanResponse> {
-  const formData = new FormData();
-
-  formData.append(
-    "image",
-    {
-      uri: imageUri,
-      name: "scan.jpg",
-      type: "image/jpeg",
-    } as any,
-  );
-
-  const response = await fetch(
-    `${API_BASE_URL}/api/v1/scan`,
-    {
-      method: "POST",
-      body: formData,
-    },
-  );
-
-  if (!response.ok) {
-    const body = await response.text();
-
-    throw new Error(
-      `Scan failed (${response.status}): ${body}`,
-    );
-  }
-
-  return response.json();
 }
