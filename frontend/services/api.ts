@@ -10,12 +10,12 @@ import type {
 const rawApiUrl = process.env.EXPO_PUBLIC_API_URL;
 
 if (!rawApiUrl) {
-  console.warn(
-    "EXPO_PUBLIC_API_URL is not set. Copy .env.example to .env and set the backend URL.",
+  throw new Error(
+    "EXPO_PUBLIC_API_URL is not configured.",
   );
 }
 
-const API_BASE_URL = (rawApiUrl ?? "http://localhost:8009").replace(/\/$/, "");
+const API_BASE_URL = rawApiUrl.replace(/\/$/, "");
 
 export class ApiError extends Error {
   constructor(

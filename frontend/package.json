@@ -11,23 +11,23 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "babel-preset-expo": "~54.0.10",
-    "expo": "~54.0.0",
-    "expo-build-properties": "~1.0.10",
-    "expo-camera": "~17.0.10",
-    "expo-constants": "~18.0.14",
-    "expo-image-manipulator": "~14.0.8",
-    "expo-linking": "~8.0.12",
-    "expo-router": "~6.0.24",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-native": "0.81.5",
-    "react-native-safe-area-context": "~5.6.0",
-    "react-native-screens": "~4.16.0",
+    "babel-preset-expo": "~57.0.0",
+    "expo": "^57.0.23",
+    "expo-build-properties": "~57.0.20",
+    "expo-camera": "~57.0.5",
+    "expo-constants": "~57.0.18",
+    "expo-image-manipulator": "~57.0.18",
+    "expo-linking": "~57.0.10",
+    "expo-router": "~57.0.21",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
     "react-native-web": "~0.21.0"
   },
   "devDependencies": {
-    "@types/react": "~19.1.10",
-    "typescript": "~5.9.2"
+    "@types/react": "~19.2.10",
+    "typescript": "~6.0.3"
   }
 }
