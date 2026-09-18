@@ -9,7 +9,7 @@ type Config struct {
 
 func Load() Config {
 	return Config{
-		Port:   getEnv("PORT", "8080"),
+		Port:   getEnv("PORT", "8088"),
 		DBPath: getEnv("DB_PATH", "./data/smws.db"),
 	}
 }
